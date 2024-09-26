@@ -52,6 +52,7 @@ main {
 
 .post, .archive {
     margin-bottom: 40px;
+    background-color: #04050d;
 }
 
 .card-container {
