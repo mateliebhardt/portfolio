@@ -19,7 +19,7 @@ html {
 header {
     position: relative;
     text-align: center;
-    height: 400px; /* Increased height for the header */
+    height: 100vh; /* Increased height for the header */
     overflow: hidden;
 }
 
