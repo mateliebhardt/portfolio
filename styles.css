@@ -19,7 +19,7 @@ html {
 header {
     position: relative;
     text-align: center;
-    height: 90vh; /* Increased height for the header */
+    height: 400px; /* Increased height for the header */
     overflow: hidden;
 }
 
@@ -77,13 +77,20 @@ main {
 .card {
     background-color: #1e1e1e;
     padding: 20px;
-    height: 300px; /* Make the cards taller */
+    height: 400px; /* Increase the height of the cards */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-radius: 0px; /* Remove rounded corners */
+    cursor: pointer; /* Makes the entire card appear clickable */
+    text-decoration: none; /* Removes the underline from links */
+    transition: transform 0.2s ease; /* Add smooth hover effect */
+}
+
+.card:hover {
+    transform: scale(1.02); /* Slightly enlarge the card on hover */
 }
 
 .card h3 {
@@ -96,9 +103,19 @@ main {
     flex-grow: 1; /* Ensure paragraph takes available space */
 }
 
+/* Make the whole card clickable */
+.card a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    text-decoration: none; /* Ensure no underline on the link */
+    color: inherit; /* Ensure link text inherits the color of the card */
+}
+
 .read-more {
-    text-decoration: none;
-    color: #ffcc00;
     font-weight: bold;
 }
 
