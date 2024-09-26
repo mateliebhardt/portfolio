@@ -86,7 +86,20 @@ main {
     border-radius: 0px; /* Remove rounded corners */
     cursor: pointer; /* Makes the entire card appear clickable */
     text-decoration: none; /* Removes the underline from links */
-    transition: transform 0.2s ease; /* Add smooth hover effect */
+    transition: transform 0.2s ease;
+    position: relative; /* Ensures the clickable area stays inside the card */
+}
+
+.card a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    text-decoration: none;
+    color: inherit;
+    pointer-events: auto; /* Ensure the link stays functional only within the card */
 }
 
 .card:hover {
